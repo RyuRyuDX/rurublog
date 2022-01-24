@@ -1,16 +1,24 @@
 import { client } from "../../libs/client";
+import {  Box,
+  Flex,
+  Heading, 
+  Text,
+  Stack,
+  Avatar,
+  Image,
+  ChatIcon } from "@chakra-ui/react";
 
 export default function BlogId({ blog }) {
   return (
-    <main>
-      <h1>{blog.title}</h1>
+    <Flex p="6" w="100vw" h="100vh" bg="gray.300">
+    <h1>{blog.title}</h1>
       <p>{blog.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
           __html: `${blog.body}`,
         }}
       />
-    </main>
+    </Flex>
   );
 }
 
